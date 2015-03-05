@@ -30,7 +30,14 @@ text goes here
 \clearpage
 
 \subsection{Architectural responsibilities}  % Matthew
-Integration
+\begin{itemize}
+	\item The System must be able to provide concurrent clients to read threads, post threads and update threads.
+	\item The system should be able to store all threads and posts, as well as who posted, and whether a thread has been deleted.
+	\item The system should provide an integration environment to allow for multiple deployment
+	\item The system could allow for persistent data storage for easy 'Remember Me'
+	\item Storage of archived thread
+	
+\end{itemize}
 \clearpage
 \subsection{Quality requirements} % Godfrey
 \subsubsection{Scalability}
