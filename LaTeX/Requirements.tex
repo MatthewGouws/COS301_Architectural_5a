@@ -70,21 +70,42 @@ File Transfer Protocol (FTP) is the method of copying files over the internet or
 \subsection{Quality requirements} % Godfrey
 \subsubsection{Scalability}
 
+The  Buzz system , when neccesary or needed  must be able to be easily converted into an application to be used on mobile phones. The system should be built using independent components (MVC pattern)  to ensure separition of concerns,cohesion,decoupling of components and pluggability when developing it for mobile.
+
 \subsubsection{Performance requirements}
+
+The system needs to respond almost instantly in terms of creation and deletion of a Buzz space or creation and deletion of threads as well as the management or administration of the whole system and it must also be able to handle high contention where a lot of concurrent users will want to access an actice buzz space at once where they should not experience latency or be susceptible to data traffic.
 
 \subsubsection{Maintainabilty}
 
+The system should be able to be continually improved by developers who worked on it initially and new developers.The system should also have the attribute that it can be restored.
+
 \subsubsection{Reliability and Availability}
+
+The buzz system needs to be 'online' almost every time.The server or host for the system should then be able to be used by users at any time. Also , threads or post must be recent and for the administrators the system must produce correct results when queried.
+
 
 \subsubsection{Security}
 
+The system as a whole should be able to protect the information of students and lectures from external infiltration e.g possible SQL injection. Again, it should provide some form of validation mechanism to ensure that only students that are allowed on specific Buzz spaces are allowed on a certain one. Also , the mechanism needs to block out all students who are not allowed on the system.
+
 \subsubsection{Monitorability and Auditability}
 
-\subsubsection{Testability}
+Buzz should provide a way such that it can be audited or viewed at particular check points  i.e it can keep track of the number
+of posts, keep track of dates and be able to link a post to a student. This will require to keep a record of its states during different days or months and with this we can employ the Memento design pattern.
+
+\subsubsection{Maintainability}
+
+The system should be able to be continually improved by developers who worked on it initially and new developers.
+The system should also have the attribute that it can be restored.
 
 \subsubsection{Usability}
 
+The system must be user friendly and easy to use for users. Users must be able to interact with the system i.e the user interface must be easy to learn and understand.
+
 \subsubsection{Integrability}
+
+It should be easy to combine The Buzz system with other modules or assistance technologies like a Database Management System.It should be able to export data into various other modules.
 
 
 \clearpage
