@@ -39,6 +39,7 @@ Post Office Protocol (POP) will probably not be used within the system but is us
 \item File Transfer Protocol
 File Transfer Protocol (FTP) is the method of copying files over the internet or a network but more simply put allows for the transfer of information from one computer to a remote computer. In terms of Buzz we are not creating a File Server but rather with all the images profile pictures and any other documentation that are uploaded to different profiles for other users to use make use of the File Transfer Protocol.
 
+\itemThe Enterprise service bus will be used. The bus is a subsystem that facilitates the communication between other subsystems. This means that subsystems only need to communicate through the ESB. This significantly lowers the amount of necessary connections and it processes the messages, meaning other subsystems need not waste time processing messages. If a subsystem is replaced or added, the only changes that need to take place is the creation of a new interface between the new system and the bus. This makes the system much more flexible  and makes communication much more simple.
 \end{itemize}
 
 \clearpage
