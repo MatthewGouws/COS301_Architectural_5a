@@ -7,6 +7,29 @@
 \begin{document}
 
 \input{./FrontPage.tex}
+
+\section{History}
+\begin{tabular}{|l|l|l|}
+
+\hline
+Date & Version & Description\\ %NOTE: Necessary for [updated by] ?
+\hline
+02-03-2015 & Version 0.1.0 & Document Template Created\\ %March 02 - Matthew 
+02-03-2015 & Version 0.1.1 & Document Template Edited\\ %March 02 - Matthew 
+05-03-2015 & Version 0.1.2 & Document Template Edited\\ %March 05 - Matthew 
+05-03-2015 & Version 0.1.3 & Updated Front Page \\ %March 05 - Tsepo
+08-03-2015 & Version 0.1.4 & Added Skeleton for Architectural Constraints \\ %March 08 - Werner
+09-03-2015 & Version 0.1.5 & Added API \\ %March 09 - Tsepo
+09-03-2015 & Version 0.1.6 & Added Architectural Constraints \\ %March 09 - Semaka
+09-03-2015 & Version 0.1.7 & Added Integration Protocols \\ %March 09 - Andrew
+09-03-2015 & Version 0.1.8 & Added Integration channels  \\ %March 09 - Muller
+09-03-2015 & Version 0.1.9 & Edited Skeleton \\ %March 09 - Matthew
+09-03-2015 & Version 0.1.10 & Added Background Introduction and Vision \\ %March 09 - Matthew
+09-03-2015 & Version 0.1.11 & Added Quality Requirements \\ %March 09 - Godfrey
+10-03-2015 & Version 0.1.12 & Added Access Channel Requirements \\ %March 10 - Tebogo
+10-03-2015 & Version 0.1.13 & Added Architectural Constraints \\ %March 10 - Tebogo
+10-03-2015 & Version 0.2 & Finalised layout - Needs Proof Reading \\ %March 10 - Matthew
+\end{tabular}
 \newpage
 \tableofcontents
 \newpage
@@ -27,15 +50,16 @@ This project should help to engage students and encourage learning amongst stude
 
 \section{Architectural Requirements}
 \subsection{Access channel and integration requirements} 
+\subsubsection{Access Channels}
 \paragraph{Introduction}
-The BuzzSpace system is designed to be an interactive platform in which students within the same course, module and/or department can contribute and assist each other. Given the number of people using the system, not all of them will have the same access to Internet. With this in mind, the system must be designed to accommodate such situations.
+The Buzz-space system is designed to be an interactive platform in which students within the same course, module and/or department can contribute and assist each other. Given the number of people using the system, not all of them will have the same access to Internet. With this in mind, the system must be designed to accommodate such situations.
 
 \paragraph{Web Platforms}
-The BuzzSpaces system is primarily designed to be accessed through web browser applications such as Firefox and Safari. The primary design of the architecture should be to handle user making use of such applications. The design should accommodate for different browser platforms as not everyone uses the same ones.
+The Buzz-spaces system is primarily designed to be accessed through web browser applications such as Firefox and Safari. The primary design of the architecture should be to handle user making use of such applications. The design should accommodate for different browser platforms as not everyone uses the same ones.
 
 
 \paragraph{Mobile Platforms}
-Web browsers have also been ported to mobile phones. This allows for users to access the web version of the BuzzSpace through their mobile phones. Given the fact that they are mobile, phones, not all the of the functionality that a full website provides will be abailable for mobile web users.
+Web browsers have also been ported to mobile phones. This allows for users to access the web version of the Buzz-space through their mobile phones. Given the fact that they are mobile, phones, not all the of the functionality that a full website provides will be available for mobile web users.
 
 Mobile applications for iOS, Android and Windows phones have grown in popularity. These applications can designed to run alongside the main website and provide the same functionality relative to the device. 
 
@@ -55,7 +79,7 @@ HTTP is the standard way and method to transfer method of web pages over the int
 
 \item Mail Protocols POP3 and SMTP
 
-Post Office Protocol (POP) will probably not be used within the system but is used in receiving emails. Simple Mail Transfer Protocol (SMTP) will be used though, the protocol is used in the sending of emails by making use of a SMTP server. In the case of Buzz, all notifications that are not present within Buzz will be sent through email such as account verification and notification of changes within a user’s account. Finally, if a user loses account details, all information and lost password would be sent over email.
+Post Office Protocol (POP) will probably not be used within the system but is used in receiving emails. Simple Mail Transfer Protocol (SMTP) will be used though, the protocol is used in the sending of emails by making use of a SMTP server. In the case of Buzz, all notifications that are not present within Buzz will be sent through email such as account verification and notification of changes within a users account. Finally, if a user loses account details, all information and lost password would be sent over email.
 
 \item File Transfer Protocol
 
@@ -81,14 +105,14 @@ File Transfer Protocol (FTP) is the method of copying files over the internet or
 \subsection{Quality requirements} % Godfrey
 \subsubsection{Scalability}
 
-The  Buzz system, when neccesary or needed,  must be able to be easily converted into an application to be used on mobile phones. The system should be built using independent components (MVC pattern)  to ensure separition of concerns,cohesion,decoupling of components and pluggability when developing it for mobile.
+The  Buzz system, when necessary or needed,  must be able to be easily converted into an application to be used on mobile phones. The system should be built using independent components (MVC pattern)  to ensure separation of concerns,cohesion,decoupling of components and pluggability when developing it for mobile.
 
 \subsubsection{Performance requirements}
 The Buzz system needs to:
 \begin{itemize}
-\itemRespond almost instantly in terms of creation and deletion of a Buzz space.
-\itemRespond to the creation and deletion of threads as well as the management or administration of the whole system.
-\itemBe able to handle high contention where a lot of concurrent users will want to access an actice buzz space at once where they should not experience latency or be susceptible to data traffic.
+\item Respond almost instantly in terms of creation and deletion of a Buzz space.
+\item Respond to the creation and deletion of threads as well as the management or administration of the whole system.
+\item Be able to handle high contention where a lot of concurrent users will want to access an actice buzz space at once where they should not experience latency or be susceptible to data traffic.
 \end{itemize}
 \subsubsection{Maintainabilty}
 
@@ -133,7 +157,7 @@ It should be easy to combine The Buzz system with other modules or assistance te
 					\begin{description}
 						\item[Details] \hfill \\
 							Java Platform, Enterprise Edition or Java EE is Oracle's enterprise Java computing platform. The platform provides an
-							 API and runtime environment for developing and running enterprise software, including network and web services, and
+							 API and run-time environment for developing and running enterprise software, including network and web services, and
 							 other large-scale, multi-tiered, scalable, reliable, and secure network applications. Java EE extends the Java Platform, 
 							Standard Edition (Java SE),  providing an API for object-relational mapping, distributed and multi-tier architectures, and
 							 web services. 
@@ -160,18 +184,18 @@ It should be easy to combine The Buzz system with other modules or assistance te
 						\item[Comments]\hfill \\
                                                         We will use JPQL to keep a record of the students' and lecturers' details.							
 					\end{description}
-				\item JSF (JavaServer Faces)
+				\item JSF (Java-Server Faces)
 					\begin{description}
 						\item[Details] \hfill \\
-							JavaServer Faces (JSF) is a Java specification for building component-based user interfaces for web applications and
+							Java-server Faces (JSF) is a Java specification for building component-based user interfaces for web applications and
 							 exposing them as server side Polyfills.] It was formalized as a standard through the Java Community Process and is
 							 part of the Java Platform, Enterprise Edition.
 						\item[Comments]\hfill \\	
 					\end{description}
-				\item HTML (HyperText Markup Language)
+				\item HTML (Hypertext Markup Language)
 					\begin{description}
 						\item[Details] \hfill \\
-							HyperText Markup Language, commonly referred to as HTML, is the standard markup language used to create web pages.
+							Hypertext Markup Language, commonly referred to as HTML, is the standard markup language used to create web pages.
 						\item[Comments]\hfill \\
                                                         HTML will be the used to create the discussion forum online.			
 					\end{description}
@@ -205,7 +229,7 @@ It should be easy to combine The Buzz system with other modules or assistance te
 						\item[Details] \hfill \\ 
                                                         Linux is a Unix-like, free and open source computer operating system.
 						\item[Comments]\hfill \\
-                                                        The forum will  be designed to work on any Operating system. However, Linux is ideal for certain functionalities therefore the forum will work optimally on Linux Operating Systems. The web server will be hosted on a Linux machine as Linux is widely considered to be the best operating system  for web servers.
+                                                        The forum will  be designed to work on any Operating system. However, Linux is ideal for certain functionality therefore the forum will work optimally on Linux Operating Systems. The web server will be hosted on a Linux machine as Linux is widely considered to be the best operating system  for web servers.
 					\end{description}
 			\end{itemize}	
 		\item[Deployed Environments] \hfill 
@@ -213,7 +237,7 @@ It should be easy to combine The Buzz system with other modules or assistance te
 				\item Web Based Interface
 					\begin{description}
 						\item[Details] \hfill \\
-							Users will be able to navigate to the application using a web browser from any compatible device, such as a tablet; smartphone or computer.
+							Users will be able to navigate to the application using a web browser from any compatible device, such as a tablet; smart phone or computer.
 						\item[Comments]\hfill \\
 							This is a very suitable environment since it allows for a large measure of ease of access.
 					\end{description}
@@ -221,5 +245,8 @@ It should be easy to combine The Buzz system with other modules or assistance te
 
 			\end{itemize}
 \end{description}	
-
+\section{Open Issues}
+\begin{itemize}
+\item No Public API is available for LDAP
+\end{itemize}
 \end{document}
