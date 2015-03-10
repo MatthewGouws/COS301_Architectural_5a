@@ -165,7 +165,9 @@ It should be easy to combine The Buzz system with other modules or assistance te
 							 other large-scale, multi-tiered, scalable, reliable, and secure network applications. Java EE extends the Java Platform, 
 							Standard Edition (Java SE),  providing an API for object-relational mapping, distributed and multi-tier architectures, and
 							 web services. 
-						\item[Comments]\hfill \\		
+						\item[Comments]\hfill \\	
+							Java EE as a reference architecture has a strong foundation in the devlopment community. It has been tried and tested
+							and is thus a very reliable reference architecture albeit slower than competitive solutions such as .NET.							
 					\end{description}
 			\end{itemize}
 		\item[Other Software Technologies] \hfill \\
@@ -176,7 +178,8 @@ It should be easy to combine The Buzz system with other modules or assistance te
 							The Java Persistence API (JPA) is a Java programming language application programming interface specification that
 							 describes the management of relational data in applications using Java Platform, Standard Edition and Java Platform, Enterprise Edition.
 						\item[Comments]\hfill \\
-							
+							JPA is a very simple API for entity persistence, which is very good. Simplicity is a big plus but when compared to something similair such as JDBC4
+							one can see that simplcity comes at a grest cost to performance. 
 					\end{description}
 				\item JPQL (Java Persistence Query Language)
 					\begin{description}
@@ -186,7 +189,7 @@ It should be easy to combine The Buzz system with other modules or assistance te
 							 It is heavily inspired by SQL, and its queries resemble SQL queries in syntax, but operate against JPA entity objects rather
 							 than directly with database tables.
 						\item[Comments]\hfill \\
-                                                        We will use JPQL to keep a record of the students' and lecturers' details.							
+                                                        We will use JPQL to keep a record of the students' and lecturers' details. JPQL links closely with JPA.							
 					\end{description}
 				\item JSF (Java-Server Faces)
 					\begin{description}
@@ -195,6 +198,8 @@ It should be easy to combine The Buzz system with other modules or assistance te
 							 exposing them as server side Polyfills.] It was formalized as a standard through the Java Community Process and is
 							 part of the Java Platform, Enterprise Edition.
 						\item[Comments]\hfill \\	
+							JSF is really complex, there are some that are of the opinion that the model is fundamentally broken since JSF tries to
+							add statefullness on top of a stateless HTTP protocol, and the fact that JSF tries to abstract away from HTML, CSS and HTTP.
 					\end{description}
 				\item HTML (Hypertext Markup Language)
 					\begin{description}
@@ -210,13 +215,15 @@ It should be easy to combine The Buzz system with other modules or assistance te
 							 With Ajax, web applications can send data to and retrieve from a server asynchronously (in the background) without interfering
 							 with the display and behavior of the existing page.
 						\item[Comments]\hfill \\
-                                                        Ajax will be used for client side interaction such as commenting on posts.
+                                                        Ajax will be used for client side interaction such as commenting on posts. The whole idea behind ajax is asynchronicity: things happening in the background.
+					For any web based application this is of course a very sought after feature. This is a great technology to use.
 					\end{description}
 				\item CSS
 					\begin{description}
 						\item[Details] \hfill \\
-							Cascading Style Sheet will be used for the formatting and styling of the discussion forum. It will ensure separation of the content from presentation.
+							Cascading Style Sheets (CSS) is a style sheet language used for describing the look and formatting of a document written in a markup language.
 						\item[Comments]\hfill \\
+Cascading Style Sheet will be used for the formatting and styling of the discussion forum. It will ensure separation of the content from presentation. This is the standard technology to use.
 					\end{description}	
 				\item Github
 					\begin{description}
