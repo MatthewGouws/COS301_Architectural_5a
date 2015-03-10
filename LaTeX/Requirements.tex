@@ -28,6 +28,7 @@ Date & Version & Description\\ %NOTE: Necessary for [updated by] ?
 09-03-2015 & Version 0.1.11 & Added Quality Requirements \\ %March 09 - Godfrey
 10-03-2015 & Version 0.1.12 & Added Access Channel Requirements \\ %March 10 - Tebogo
 10-03-2015 & Version 0.1.13 & Added Architectural Constraints \\ %March 10 - Tebogo
+10-03-2015 & Version 0.1.14 & Integrated Tsepo's Word Document \\ %March 10 - Matthew
 10-03-2015 & Version 0.2 & Finalised layout - Needs Proof Reading \\ %March 10 - Matthew
 \end{tabular}
 \newpage
@@ -68,7 +69,8 @@ Mobile applications for iOS, Android and Windows phones have grown in popularity
 \subsubsection{Integration Channels}
 \paragraph{Integration Channel}
 \begin{itemize}
-\item \hfill The Enterprise service bus will be used. The bus is a subsystem that facilitates the communication between other subsystems. This means that subsystems only need to communicate through the ESB. This significantly lowers the amount of necessary connections and it processes the messages. This means other subsystems need not waste time processing messages. If a subsystem is replaced or added, the only change that needs to take place is the creation of a new interface between the new system and the bus. This makes the system much more flexible and makes communication simpler.
+\item \hfill The Enterprise service bus will be used. The bus is a subsystem that facilitates the communication between other subsystems. This means that subsystems only need to communicate through the ESB. This significantly lowers the amount of necessary connections and it processes the messages. This means other subsystems need not waste time processing messages. If a subsystem is replaced or added, the only change that needs to take place is the creation of a new interface between the new system and the bus. This makes the system much more flexible and makes communication simpler. %Muller
+\item \hfill The LDAP database from the Computer science department will be required to gather the correct information for students lecturers and modules.
 \end{itemize}
 
 \paragraph{Protocols Used}
@@ -92,14 +94,16 @@ File Transfer Protocol (FTP) is the method of copying files over the internet or
 
 \clearpage
 
-\subsection{Architectural responsibilities}  % Matthew
+\subsection{Architectural responsibilities}  % Matthew & Tshepo
 \begin{itemize}
 	\item The System must be able to provide concurrent clients to read threads, post threads and update threads.
 	\item The system should be able to store all threads and posts, as well as who posted, and whether a thread has been deleted.
 	\item The system should provide an integration environment to allow for multiple deployment
 	\item The system could allow for persistent data storage for easy 'Remember Me'
 	\item Storage of archived thread
-	
+	\item The system should integrate seamlessly with LDAP
+	\item The system should provide an infrastructure for notifying users based on subscriptions
+	\item The system should host a suitable environment for services and business logic
 \end{itemize}
 \clearpage
 \subsection{Quality requirements} % Godfrey
@@ -130,7 +134,7 @@ The system as a whole should be able to protect the information of students and 
 \subsubsection{Monitorability and Auditability}
 
 Buzz should provide a way such that it can be audited or viewed at particular check points. Examples of this would be: keeping track of the number
-of posts, keeping track of dates, and being able to link a post to a student. This will require to keep a record of its states during different days or months and with this we can employ the Memento design pattern.
+of posts, keeping track of dates, and being able to link a post to a student. This will require to keep a record of its states during different days or months and with this we can employ the Memento design pattern. The system should also keep track of admin login updates and deletes, from what IP address the request originated
 
 \subsubsection{Maintainability}
 
