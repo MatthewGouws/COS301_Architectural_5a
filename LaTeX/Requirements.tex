@@ -26,24 +26,28 @@ This project should help to engage students and encourage learning amongst stude
 
 
 \section{Architectural Requirements}
-\subsection{Access channel and integration requirements} 
-\subsection{Introduction}
+\subsection{Access channel and integration requirements} % Change Formatting for Document Format - Matthew
+\subsection{Access Channels}
+\begin{itemize}
+\item Introduction \\ \hfill
 The BuzzSpace system is designed to be an interactive platform in which students within the same course, module and/or department can contribute and assist each other. Given the number of people using the system, not all of them will have the same amount of access to Internet. With this in mind, the system must be designed to accommodate such situation.
 
-\subsection{Web Platforms}
-The BuzzSpaces system is primarily designed to be accessed through web browser applications such as Firefox and Safari. The primary design of the architecture should be to handle user making use of such applications. The design should accommodate for different browser platforms as not everyone uses the same ones.
+\item Web Platforms \\ \hfill
+The BuzzSpaces system is primarily designed to be accessed through web browser applications such as Firefox and Safari. The primary design of the architecture should be to handle user making use of such applications. The design should accommodate for different browser platforms as not everyone uses the same browser.
 
 
-\subsection{Mobile Platform}
-Web browsers have also been ported to mobile phones. This allows for users to access the web version of the BuzzSpace through their mobile phones. Given the fact that they are mobile, phones, not all the of the functionality that a full website provides will be abailable for mobile web users.
+\item Mobile Platform \\ \hfill
+Web browsers have also been ported to mobile phones. This allows for users to access the web version of the BuzzSpace through their mobile phones. Given the fact that they are mobile, phones, not all the of the functionality that a full website provides will be available for mobile web users.
 
 Mobile applications for iOS, Android and Windows phones have grown in popularity. These applications can designed to run alongside the main website and provide the same functionality relative to the device. 
+\end{itemize}
 
-\paragraph{System access channels}
+
+
 \subsubsection{Integration Channels}
 \paragraph{Integration Channel}
 \begin{itemize}
-\item \hfill The Enterprise service bus will be used. The bus is a subsystem that facilitates the communication between other subsystems. This means that subsystems only need to communicate through the ESB. This significantly lowers the amount of necessary connections and it processes the messages, meaning other subsystems need not waste time processing messages. If a subsystem is replaced or added, the only changes that need to take place is the creation of a new interface between the new system and the bus. This makes the system much more flexible  and makes communication much more simple.
+\item The Enterprise service bus will be used. The bus is a subsystem that facilitates the communication between other subsystems. This means that subsystems only need to communicate through the ESB. This significantly lowers the amount of necessary connections and it processes the messages, meaning other subsystems need not waste time processing messages. If a subsystem is replaced or added, the only changes that need to take place is the creation of a new interface between the new system and the bus. This makes the system much more flexible  and makes communication much more simple.
 \end{itemize}
 
 \paragraph{Protocols Used}
@@ -207,7 +211,7 @@ It should be easy to combine The Buzz system with other modules or assistance te
 				\item Web Based Interface
 					\begin{description}
 						\item[Details] \hfill \\
-							Users will be able to navigate to the application using a web browser from any compatible device, such as a tablet; smartphone or computer.
+							Users will be able to navigate to the application using a web browser from any compatible device, such as a tablet; smart-phone or computer.
 						\item[Comments]\hfill \\
 							This is a very suitable environment since it allows for a large measure of ease of access.
 					\end{description}
@@ -216,4 +220,8 @@ It should be easy to combine The Buzz system with other modules or assistance te
 			\end{itemize}
 \end{description}	
 
+\subsection{Open Issues}
+\begin{itemize}
+\item No public API is available for LDAP
+\end{itemize}
 \end{document}
